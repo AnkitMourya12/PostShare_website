@@ -6,9 +6,9 @@ const postApi = require("./routes/post");
 const userApi = require("./routes/user");
 const profileApi = require("./routes/profile");
 const bodyparser  = require("body-parser")
-require('dotenv').config();
+//require('dotenv').config();
 
-const mongoUri = process.env.MONGODB_URL_LOCAL
+//const mongoUri = process.env.MONGODB_URL_LOCAL
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.send("Hello from Express!");
 });
 
-mongoose.connect(mongoUri, {
+mongoose.connect("mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=socials", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
