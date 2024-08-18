@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.send("Hello from Express!");
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=socials", {
+mongoose.connect("mongodb+srv://ankit12:Tikna12@social1.dmto26b.mongodb.net/mydb", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
